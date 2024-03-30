@@ -1,19 +1,36 @@
 package com.unifil.pontolimpo.entites;
 
-public class Ticket {
+import java.io.Serializable;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "TB_TICKET")
+public class Ticket implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String localização;
     private String titulo;
     private String descrição;
+    private String status;
+    private String ativo;
     
 
     //Constructor
-    public Ticket(Long id, String localização, String titulo, String descrição) {
+    public Ticket(Long id, String localização, String titulo, String descrição, String status, String ativo) {
         this.id = id;
         this.localização = localização;
         this.titulo = titulo;
         this.descrição = descrição;
+        this.status = status;
+        this.ativo = ativo;
     }
     
     public Ticket() {
@@ -51,13 +68,32 @@ public class Ticket {
     public void setDescrição(String descrição) {
         this.descrição = descrição;
     }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    
+    public String getAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(String ativo) {
+        this.ativo = ativo;
+    }
+    
+    
     //toString
 
     @Override
     public String toString() {
         return "Ticket [id=" + id + ", localização=" + localização + ", titulo=" + titulo + ", descrição=" + descrição
-                + "]";
-    }
+                + ", status=" + status + ", ativo=" + ativo + "]";
+    }  
 
     //Hash and Equals
     @Override
