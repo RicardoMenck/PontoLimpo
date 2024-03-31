@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { tokenGetter } from './app.module';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pontolimpo';
+
+  logged() {
+    const tokenJWT = tokenGetter();
+    return tokenJWT != null;
+  }
 }
