@@ -20,11 +20,11 @@ public class Ticket implements Serializable {
     private String titulo;
     private String descrição;
     private String status;
-    private String ativo;
+    private boolean ativo;
     
 
     //Constructor
-    public Ticket(Long id, String localização, String titulo, String descrição, String status, String ativo) {
+    public Ticket(Long id, String localização, String titulo, String descrição, String status, boolean ativo) {
         this.id = id;
         this.localização = localização;
         this.titulo = titulo;
@@ -77,12 +77,11 @@ public class Ticket implements Serializable {
         this.status = status;
     }
 
-    
-    public String getAtivo() {
+    public boolean isAtivo() {
         return ativo;
     }
 
-    public void setAtivo(String ativo) {
+    public void setAtivo(boolean ativo) {
         this.ativo = ativo;
     }
     
