@@ -8,9 +8,9 @@
 		<version>3.2.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.unifil</groupId>
+	<groupId>br.com.unifil</groupId>
 	<artifactId>pontolimpo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<name>pontolimpo</name>
 	<description>Projeto de extensão Unifil</description>
 	<properties>
