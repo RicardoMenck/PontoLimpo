@@ -8,13 +8,19 @@ import { SobreComponent } from './components/sobre/sobre.component';
 import { JwtModule } from '@auth0/angular-jwt';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './components/login/login.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CriarTicketComponent } from './components/tickets/criar-ticket/criar-ticket.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SobreComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent,
+    FooterComponent,
+    CriarTicketComponent
   ],
   imports: [
     BrowserModule,

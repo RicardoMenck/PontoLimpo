@@ -1,0 +1,48 @@
+CREATE TABLE `Equipe` (
+  `ID` INT,
+  `nome` VARCHAR,
+  `funcao` TEXT,
+  PRIMARY KEY (`ID`)
+);
+
+CREATE TABLE `Usuario` (
+  `ID` INT,
+  `nome` VARCHAR,
+  `email` VARCHAR,
+  `senha` VARCHAR,
+  PRIMARY KEY (`ID`)
+);
+
+CREATE TABLE `Atualizacao` (
+  `descricao` Type,
+  `data_acao` DATATIME,
+  `ID_Ticket` INT,
+  `ID_Analista` INT,
+  `ID_Equipe` INT
+);
+
+CREATE TABLE `Ticket` (
+  `ID` INT,
+  `titulo` VARCHAR,
+  `nome` VARCHAR,
+  `cpf` CHAR(11),
+  `descricao` TEXT,
+  `data_criacao` DATATIME,
+  `data_termino` DATATIME,
+  `status` BOOLEAN,
+  `endereco` VARCHAR,
+  `referencia` Type,
+  `ID_Equipe` INT,
+  PRIMARY KEY (`ID`)
+);
+
+CREATE TABLE `Analista` (
+  `ID` INT,
+  `nome` VARCHAR,
+  `email` VARCHAR,
+  `senha` VARCHAR,
+  `role` ROLE,
+  `listaTicket` List,
+  PRIMARY KEY (`ID`)
+);
+
