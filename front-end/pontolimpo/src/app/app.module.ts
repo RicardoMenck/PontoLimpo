@@ -11,6 +11,8 @@ import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CriarTicketComponent } from './components/tickets/criar-ticket/criar-ticket.component';
+import { ListarTicketComponent } from './components/tickets/listar-ticket/listar-ticket.component';
+import { RegistroComponent } from './components/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CriarTicketComponent } from './components/tickets/criar-ticket/criar-ti
     LoginComponent,
     HeaderComponent,
     FooterComponent,
-    CriarTicketComponent
+    CriarTicketComponent,
+    ListarTicketComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
